@@ -18,8 +18,7 @@ def handle_my_custom_event(json, methods=['GET', 'POST']):
     	if len(json['message'])>5:
 	    	print('received my event: ' + str(json))
 	    	socketio.emit('my response', json, callback=messageReceived)
-	    else:
-	    	continue
+	    
     except:
     	print("retrying")
 if __name__ == '__main__':
